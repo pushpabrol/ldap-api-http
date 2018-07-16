@@ -2,6 +2,17 @@ function login(email, password, callback) {
     // This script should authenticate a user against the credentials stored in
     // your database.
     // It is executed when a user attempts to log in or immediately after signing
+    /*
+    Configuration values required to call this API are: 
+    
+    LDAP_API_URL = ur ldap api url
+AUTH0_DOMAIN = tenant.auth0.com
+mgmt_client_id	= client_id for server side client to call the LDAP API
+auth0_api_audience	= audience defined in auth0 for LDAP API
+auth0_api_scope	= Scope for the API
+mgmt_client_secret	= client_secret for for server side client to call the LDAP API
+    */
+    
 console.log(configuration);
   getToken(function(error, token) {
         if (error) callback(new Error(error));
